@@ -28,21 +28,114 @@
             <a href="contact.html">Contact</a>
          </div>
       </div>
-      <section class="categories-section">
-         <h1 data-aos="fade-up">Our Categories</h1>
-         <div class="categories">
-            <div class="category" data-aos="zoom-in">
-               <h3>Shop Websites</h3>
-               <p>Perfect for businesses like Restaurants, Gyms, and more.</p>
-               <a href="#shop">Explore</a>
+      <section class="categories-cards">
+         <h2 data-aos="fade-up">Our Services</h2>
+         <div class="cards-container">
+            <div class="card" data-aos="flip-up">
+               <h3>Websites</h3>
+               <p>Create modern, functional websites.</p>
+               <div class="sub-services">
+                  <h4>Includes:</h4>
+                  <p>Event Websites</p>
+                  <p>Shop Websites</p>
+               </div>
+               <button class="view-samples" onclick="viewSamples('websites')">View Samples</button>
             </div>
-            <div class="category" data-aos="zoom-in">
-               <h3>Event Websites</h3>
-               <p>Specially designed for Weddings, Birthdays, and more.</p>
-               <a href="#event">Explore</a>
+            <div class="card" data-aos="flip-up">
+               <h3>Logos</h3>
+               <p>Professional logos for your brand.</p>
+               <button class="view-samples" onclick="viewSamples('logos')">View Samples</button>
+            </div>
+            <div class="card" data-aos="flip-up">
+               <h3>Visiting Cards</h3>
+               <p>Creative and unique visiting cards.</p>
+               <button class="view-samples" onclick="viewSamples('visiting-cards')">View Samples</button>
+            </div>
+            <div class="card" data-aos="flip-up">
+               <h3>Posters</h3>
+               <p>Engaging posters for events and campaigns.</p>
+               <button class="view-samples" onclick="viewSamples('posters')">View Samples</button>
             </div>
          </div>
       </section>
+      <script>
+         function viewSamples(category) {
+         const samples = {
+         websites: ["Event Website Sample 1", "Shop Website Sample 2"],
+         logos: ["Logo Sample 1", "Logo Sample 2"],
+         "visiting-cards": ["Visiting Card Sample 1", "Visiting Card Sample 2"],
+         posters: ["Poster Sample 1", "Poster Sample 2"]
+         };
+         
+         const selectedSamples = samples[category];
+         if (selectedSamples) {
+         alert("Samples for " + category + ":\n" + selectedSamples.join("\n"));
+         } else {
+         alert("No samples available for this category.");
+         }
+         }
+         
+      </script>     
+      
+      
+      <!-- plans section -->
+
+      <section class="plans-cards">
+        <h2 data-aos="fade-up">Our Plans</h2>
+        <div class="cards-container">
+          <div class="card" data-aos="flip-up">
+            <h3>Basic Plan</h3>
+            <p>Perfect for individuals and small businesses.</p>
+            <ul class="features">
+              <li>1 Website</li>
+              <li>1 Logo Design</li>
+              <li>Free Hosting for 6 Months</li>
+              <li>Basic SEO Optimization</li>
+            </ul>
+            <p class="price">₹4999</p>
+            <button class="subscribe-btn" onclick="subscribePlan('Basic Plan')">Subscribe</button>
+          </div>
+          <div class="card" data-aos="flip-up">
+            <h3>Standard Plan</h3>
+            <p>Ideal for growing businesses and startups.</p>
+            <ul class="features">
+              <li>3 Websites</li>
+              <li>3 Logo Designs</li>
+              <li>Free Hosting for 1 Year</li>
+              <li>Advanced SEO Optimization</li>
+            </ul>
+            <p class="price">₹9999</p>
+            <button class="subscribe-btn" onclick="subscribePlan('Standard Plan')">Subscribe</button>
+          </div>
+          <div class="card" data-aos="flip-up">
+            <h3>Premium Plan</h3>
+            <p>Best for enterprises and larger organizations.</p>
+            <ul class="features">
+              <li>Unlimited Websites</li>
+              <li>5 Logo Designs</li>
+              <li>Free Hosting for 2 Years</li>
+              <li>Premium SEO Optimization</li>
+            </ul>
+            <p class="price">₹19999</p>
+            <button class="subscribe-btn" onclick="subscribePlan('Premium Plan')">Subscribe</button>
+          </div>
+        </div>
+      </section>
+      <script>
+        function subscribePlan(plan) {
+  alert(`You selected the ${plan}. Our team will contact you for further details!`);
+}
+
+      </script> 
+      
+      <section class="plans-tagline">
+        <p>
+          <span>For Orders and Queries</span> 
+          <a href="contact.html" class="highlighted-link">Click Here</a>
+        </p>
+        <p class="terms">*Terms and conditions apply</p>
+      </section>
+      
       <footer>
          <p>&copy; 2024 WebVisionary. All rights reserved.</p>
       </footer>

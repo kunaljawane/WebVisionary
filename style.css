@@ -278,23 +278,46 @@ footer {
 
 
 
-/* Flashing animation for the logo */
+/* Reset logo animation */
+.logo-img {
+  animation: none; /* No flashing effect */
+}
+
+/* Flashing effect for the "Explore Now" button */
 @keyframes flash {
-  0% {
-    opacity: 1;
+  0%, 100% {
+    background-color: #ffc107; /* Yellow */
+    color: black; /* Black text */
+    transform: scale(1);
   }
   50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
+    background-color: black; /* Black background */
+    color: #ffc107; /* Yellow text */
+    transform: scale(1.05); /* Slightly larger */
   }
 }
 
-/* Apply flashing effect to logo */
-.logo-img {
-  animation: flash 2s infinite; /* Flash every 1 second */
+.btn {
+  background-color: #ffc107; /* Initial Yellow color */
+  color: black; /* Initial Black text */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  animation: flash 2s infinite; /* Add flashing effect */
 }
+
+/* Responsive adjustments for the button */
+@media (max-width: 768px) {
+  .btn {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+}
+
 
 /* Typing effect */
 @keyframes typing {
@@ -343,4 +366,249 @@ footer {
 /* After typing animation finishes, hide the cursor */
 .hero h1.typing-done {
   border-color: transparent;
+}
+
+
+/* Categories Cards Section */
+.categories-cards {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.categories-cards h2 {
+  font-size: 2.5rem;
+  color: #ffc107;
+  margin-bottom: 30px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: #111;
+  border: 2px solid #ffc107;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h3 {
+  font-size: 1.8rem;
+  color: #ffc107;
+}
+
+.card p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.card .sub-services h4 {
+  margin-top: 10px;
+  color: #fff;
+}
+
+.card .sub-services p {
+  font-size: 0.9rem;
+  color: #ffc107;
+  margin: 5px 0;
+}
+
+.card .view-samples {
+  background: #ffc107;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card .view-samples:hover {
+  background: #000;
+  color: #ffc107;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .card h3 {
+    font-size: 1.5rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* Plans Cards Section */
+.plans-cards {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.plans-cards h2 {
+  font-size: 2.5rem;
+  color: #ffc107;
+  margin-bottom: 30px;
+}
+
+.plans-cards .cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.plans-cards .card {
+  background: #111;
+  border: 2px solid #ffc107;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plans-cards .card h3 {
+  font-size: 1.8rem;
+  color: #ffc107;
+}
+
+.plans-cards .card p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.plans-cards .card .features {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.plans-cards .card .features li {
+  margin: 5px 0;
+  font-size: 0.95rem;
+}
+
+.plans-cards .card .price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffc107;
+  margin: 15px 0;
+}
+
+.plans-cards .card .subscribe-btn {
+  background: #ffc107;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.plans-cards .card .subscribe-btn:hover {
+  background: #000;
+  color: #ffc107;
+}
+
+.plans-cards .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .plans-cards .cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .plans-cards .card h3 {
+    font-size: 1.5rem;
+  }
+
+  .plans-cards .card p,
+  .plans-cards .card .price {
+    font-size: 1rem;
+  }
+}
+
+
+/* Plans Tagline Section */
+.plans-tagline {
+  text-align: center;
+  margin-top: 30px;
+  padding: 10px 20px;
+  color: #fff;
+}
+
+.plans-tagline p {
+  margin: 10px 0;
+}
+
+.plans-tagline span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffc107; /* Yellow to match the theme */
+}
+
+.plans-tagline .highlighted-link {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff5733; /* Bright orange for emphasis */
+  text-decoration: none;
+  border-bottom: 2px solid #ff5733;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.plans-tagline .highlighted-link:hover {
+  color: #ffc107;
+  border-color: #ffc107; /* Matches the yellow theme on hover */
+}
+
+.plans-tagline .terms {
+  font-size: 0.9rem;
+  color: #888; /* Subtle gray for smaller text */
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .plans-tagline span,
+  .plans-tagline .highlighted-link {
+    font-size: 1.2rem;
+  }
+
+  .plans-tagline .terms {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .plans-tagline span,
+  .plans-tagline .highlighted-link {
+    font-size: 1rem;
+  }
+
+  .plans-tagline .terms {
+    font-size: 0.7rem;
+  }
 }
