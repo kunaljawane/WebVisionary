@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - WebVisionary</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">
+      <!-- Replace with your logo image and make it clickable to redirect to index.html -->
+      <a href="index.html">
+        <img src="Images/logo.png" alt="Web Visionary Logo" class="logo-img">
+      </a>
+    </div>
+    <div class="menu-toggle" id="menuToggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="categories.html">Categories</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <section class="portfolio-section">
+    <h1 data-aos="fade-up">Our Work</h1>
+    <div class="portfolio-gallery">
+      <div class="portfolio-item" data-aos="fade-up">
+        <img src="images/restaurant.jpg" alt="Restaurant Website">
+        <h3>Restaurant Website</h3>
+      </div>
+      <div class="portfolio-item" data-aos="fade-up">
+        <img src="images/gym.jpg" alt="Gym Website">
+        <h3>Gym Website</h3>
+      </div>
+      <div class="portfolio-item" data-aos="fade-up">
+        <img src="images/wedding.jpg" alt="Wedding Website">
+        <h3>Wedding Website</h3>
+      </div>
+      <div class="portfolio-item" data-aos="fade-up">
+        <img src="images/birthday.jpg" alt="Birthday Website">
+        <h3>Birthday Website</h3>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 WebVisionary. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

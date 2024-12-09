@@ -1,0 +1,346 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #000;
+  color: #fff;
+  box-sizing: border-box; /* Ensure padding/margin don't affect layout */
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #111;
+  height: 60px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Website name styling */
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffc107;
+  text-transform: uppercase;
+}
+
+/* Navigation links container */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+/* Individual navigation links */
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 8px 12px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #ffc107;
+  color: #111;
+  border-radius: 4px;
+}
+
+/* Style for the logo */
+.logo-img {
+  height: 70px; /* Adjust height as needed */
+  width: auto;  /* Maintain aspect ratio */
+}
+
+
+/* Hamburger menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  /* Hide the regular nav links on small screens */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #111;
+    padding: 20px 0;
+  }
+
+  .nav-links a {
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Display hamburger menu */
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Show nav links when menu is active */
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(45deg, #000, #ffcc00);
+}
+
+.hero h1 {
+  font-size: 3em;
+}
+
+.hero .btn {
+  margin-top: 20px;
+  background: #000;
+  color: #ffcc00;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.hero .btn:hover {
+  background: #ffcc00;
+  color: #000;
+}
+
+/* Categories Section */
+.categories-preview {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.category {
+  background: #000;
+  border: 2px solid #ffcc00;
+  padding: 20px;
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+.category h3 {
+  color: #ffcc00;
+}
+
+.category a {
+  text-decoration: none;
+  color: #ffcc00;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  color: #ffcc00;
+}
+
+/* Testimonials Section */
+.testimonials-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111;
+  color: #fff;
+  padding: 50px 20px;
+  min-height: 50vh; /* Reduced the height to 50% of the viewport height */
+  flex-direction: column;
+  text-align: center;
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ensure full width */
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.slide {
+  display: none; /* Initially hide all slides */
+  justify-content: center;
+  align-items: center;
+  max-width: 800px; /* Limit the width of the testimonial box */
+  width: 100%;
+  padding: 20px; /* Add some padding inside the box */
+  border-radius: 10px;
+  background-color: #222; /* Slightly darker background for the box */
+  transition: opacity 0.5s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+}
+
+.slide img {
+  width: 80px; /* Reduced size of the image */
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px; /* Reduced margin between the image and text */
+}
+
+.testimonial-content {
+  text-align: center;
+}
+
+.testimonial-text {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.testimonial-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.testimonial-role {
+  font-style: normal;
+  color: #ffc107;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .testimonials-slider {
+    padding: 30px 10px;
+  }
+
+  .slide {
+    flex-direction: column; /* Stack image and content vertically */
+    text-align: center; /* Center content */
+    padding: 15px; /* Reduced padding for mobile */
+    max-width: 600px; /* Ensure box is smaller on mobile */
+  }
+
+  .slide img {
+    width: 70px; /* Smaller image on mobile */
+    height: 70px;
+    margin-bottom: 10px; /* Reduced space between image and text */
+  }
+
+  .testimonial-text {
+    font-size: 0.95rem;
+  }
+
+  .testimonial-name {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials-slider {
+    padding: 20px 10px;
+  }
+
+  .testimonial-text {
+    font-size: 0.9rem; /* Slightly smaller font size */
+  }
+
+  .testimonial-name {
+    font-size: 1rem;
+  }
+
+  .slide {
+    padding: 10px; /* Less padding for very small screens */
+  }
+}
+
+
+
+/* Flashing animation for the logo */
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Apply flashing effect to logo */
+.logo-img {
+  animation: flash 2s infinite; /* Flash every 1 second */
+}
+
+/* Typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Blinking effect for the cursor */
+@keyframes blink {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #000;
+  }
+}
+
+/* Make sure tagline is responsive */
+.hero h1 {
+  font-size: 3rem; /* Default font size */
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #000; /* Cursor-like effect */
+  width: 0;
+  animation: typing 3s steps(40) 1s 1 normal both, blink 0.75s step-end infinite;
+  display: inline-block;
+}
+
+/* Make the text responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem; /* Adjust font size for very small screens */
+  }
+}
+
+/* After typing animation finishes, hide the cursor */
+.hero h1.typing-done {
+  border-color: transparent;
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>WebVisionary</title>
+      <script src="script.js"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+   </head>
+   <body>
+      <!-- Navbar -->
+      <div class="navbar">
+         <div class="logo">
+            <!-- Replace with your logo image and make it clickable to redirect to index.html -->
+            <a href="index.html">
+            <img src="Images/logo.png" alt="Web Visionary Logo" class="logo-img">
+            </a>
+         </div>
+         <div class="menu-toggle" id="menuToggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+         </div>
+         <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="categories.html">Categories</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+         </div>
+      </div>
+      <script>
+         window.addEventListener('load', function () {
+         const logo = document.querySelector('.logo-img');
+         logo.style.animation = 'flash 1s infinite'; // Start flashing when page loads
+         });
+         
+      </script>
+      <script
+         ></script>
+      <section class="hero" data-aos="fade-up">
+         <h1 id="tagline">Transform Your Ideas into Stunning Websites</h1>
+         <p>Explore professionally designed websites to boost your business.</p>
+         <a href="categories.html" class="btn">Explore Now</a>
+      </section>
+      <script>
+         window.addEventListener('load', function () {
+         const tagline = document.querySelector('#tagline');
+         
+         // Apply typing animation
+         tagline.style.animation = 'typing 3s steps(40) 1s 1 normal both, blink 0.75s step-end infinite';
+         
+         // After typing finishes, remove the blinking cursor (Hide it)
+         setTimeout(function () {
+         tagline.classList.add('typing-done'); // Hide the cursor after typing is done
+         }, 3000); // This should match the typing duration (3 seconds)
+         });
+         
+          
+      </script>
+      <section class="categories-preview" data-aos="zoom-in">
+         <h2>Our Categories</h2>
+         <div class="categories">
+            <div class="category">
+               <h3>Shop Websites</h3>
+               <p>Includes Restaurants, Gyms, and more.</p>
+               <a href="categories.html#shop">View More</a>
+            </div>
+            <div class="category">
+               <h3>Event Websites</h3>
+               <p>Includes Weddings, Birthdays, and more.</p>
+               <a href="categories.html#event">View More</a>
+            </div>
+         </div>
+      </section>
+      <section class="testimonials-slider">
+         <div class="slider">
+            <div class="slide">
+               <img src="Images/ppl1.jpg" alt="Client Photo" class="testimonial-photo" />
+               <div class="testimonial-content">
+                  <p class="testimonial-text">
+                     "Web Visionary transformed my business with a stunning website. Their designs are modern and engaging. Highly recommended!"
+                  </p>
+                  <h3 class="testimonial-name">John Doe</h3>
+                  <p class="testimonial-role">Owner, XYZ Fitness</p>
+               </div>
+            </div>
+            <div class="slide">
+               <img src="Images/ppl2.jpg" alt="Client Photo" class="testimonial-photo" />
+               <div class="testimonial-content">
+                  <p class="testimonial-text">
+                     "I loved working with Web Visionary. The website design was exactly what I needed for my startup. Great team!"
+                  </p>
+                  <h3 class="testimonial-name">Jane Smith</h3>
+                  <p class="testimonial-role">Founder, ABC Startup</p>
+               </div>
+            </div>
+            <div class="slide">
+               <img src="Images/ppl3.jpg" alt="Client Photo" class="testimonial-photo" />
+               <div class="testimonial-content">
+                  <p class="testimonial-text">
+                     "Highly creative and professional! Web Visionary delivered beyond expectations. Thank you!"
+                  </p>
+                  <h3 class="testimonial-name">David Lee</h3>
+                  <p class="testimonial-role">CEO, Tech Solutions</p>
+               </div>
+            </div>
+         </div>
+      </section>
+      <script>
+         const slider = document.querySelector('.slider');
+         const slides = document.querySelectorAll('.slide');
+         let currentIndex = 0;
+         
+         function showNextSlide() {
+           slides[currentIndex].style.opacity = '0'; // Hide current slide
+           setTimeout(() => {
+             slides[currentIndex].style.display = 'none'; // Remove from view
+             currentIndex = (currentIndex + 1) % slides.length; // Update index to next slide
+             slides[currentIndex].style.display = 'flex'; // Show next slide
+             setTimeout(() => {
+               slides[currentIndex].style.opacity = '1'; // Fade in next slide
+             }, 50); // Slight delay to allow display change
+           }, 500); // Delay matches CSS transition duration
+         }
+         
+         // Initialize: Hide all slides except the first
+         slides.forEach((slide, index) => {
+           if (index !== 0) {
+             slide.style.display = 'none';
+             slide.style.opacity = '0';
+           }
+         });
+         
+         // Start the slider
+         setInterval(showNextSlide, 3000); // Change slide every 5 seconds
+         
+         
+      </script>  
+      <footer>
+         <p>&copy; 2024 WebVisionary. All rights reserved.</p>
+      </footer>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+      <script src="script.js"></script>
+      <script>
+         AOS.init();
+      </script>
+   </body>
+</html>
