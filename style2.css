@@ -1,0 +1,93 @@
+/* Portfolio Section */
+.portfolio-section {
+    padding: 50px 20px;
+    background-color: #000; /* Matches website theme */
+    color: #fff;
+    text-align: center;
+  }
+  
+  .portfolio-heading {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #ffc107; /* Yellow for theme consistency */
+  }
+  
+  .portfolio-category {
+    font-size: 2rem;
+    margin: 40px 0 20px;
+    color: #ff5733; /* Orange for emphasis */
+  }
+  
+  .portfolio-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .card {
+    background: #111;
+    border: 2px solid #ffc107; /* Yellow border */
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .card h3 {
+    font-size: 1.2rem;
+    color: #ffc107;
+    margin: 10px 0;
+  }
+  
+  .card .btn {
+    display: inline-block;
+    margin: 10px 0 20px;
+    padding: 10px 20px;
+    background: #ff5733; /* Orange button */
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .card .btn:hover {
+    background: #ffc107; /* Yellow on hover */
+    color: #000;
+  }
+  
+  .card:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 4px 15px rgba(255, 199, 7, 0.5); /* Yellow glow */
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .portfolio-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card {
+      width: 90%; /* Adjust width for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .portfolio-heading {
+      font-size: 2rem;
+    }
+  
+    .portfolio-category {
+      font-size: 1.5rem;
+    }
+  }
+  

@@ -1,64 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - WebVisionary</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-</head>
-<body>
-  <div class="navbar">
-    <div class="logo">
-      <!-- Replace with your logo image and make it clickable to redirect to index.html -->
-      <a href="index.html">
-        <img src="Images/logo.png" alt="Web Visionary Logo" class="logo-img">
-      </a>
-    </div>
-    <div class="menu-toggle" id="menuToggle">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </div>
-    <div class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <a href="categories.html">Categories</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </div>
-
-  <section class="portfolio-section">
-    <h1 data-aos="fade-up">Our Work</h1>
-    <div class="portfolio-gallery">
-      <div class="portfolio-item" data-aos="fade-up">
-        <img src="images/restaurant.jpg" alt="Restaurant Website">
-        <h3>Restaurant Website</h3>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Portfolio - WebVisionary</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="style2.css">
+   </head>
+   <body>
+      <!-- Navbar -->
+      <div class="navbar">
+         <div class="logo">
+            <a href="index.html">
+            <img src="Images/logo.png" alt="Web Visionary Logo" class="logo-img">
+            </a>
+         </div>
+         <div class="menu-toggle" id="menuToggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+         </div>
+         <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="categories.html">Categories</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+         </div>
       </div>
-      <div class="portfolio-item" data-aos="fade-up">
-        <img src="images/gym.jpg" alt="Gym Website">
-        <h3>Gym Website</h3>
-      </div>
-      <div class="portfolio-item" data-aos="fade-up">
-        <img src="images/wedding.jpg" alt="Wedding Website">
-        <h3>Wedding Website</h3>
-      </div>
-      <div class="portfolio-item" data-aos="fade-up">
-        <img src="images/birthday.jpg" alt="Birthday Website">
-        <h3>Birthday Website</h3>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2024 WebVisionary. All rights reserved.</p>
-  </footer>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-</body>
+      <!-- Portfolio Section -->
+      <section class="portfolio-section">
+         <h1 class="portfolio-heading">Our Works</h1>
+         <!-- Websites -->
+         <h2 class="portfolio-category">Websites</h2>
+         <div class="portfolio-cards">
+            <div class="card">
+               <img src="Images/res.jpg" alt="Website Sample">
+               <h3>Restaurant Website</h3>
+               <a href="#" class="btn">View Sample</a>
+            </div>
+            <div class="card">
+               <img src="Images/gym.jpg" alt="Website Sample">
+               <h3>Gym Website</h3>
+               <a href="https://skfitnesss.netlify.app/index.html" class="btn">View Sample</a>
+            </div>
+         </div>
+         <!-- Logos -->
+         <h2 class="portfolio-category">Logos</h2>
+         <div class="portfolio-cards">
+            <div class="card">
+               <img src="Images/logo1.png" alt="Logo Sample">
+               <h3>Creative Logo</h3>
+               <a href="sample-links/logo1.html" class="btn">View Sample</a>
+            </div>
+            <div class="card">
+               <img src="Images/logo2.png" alt="Logo Sample">
+               <h3>Modern Logo</h3>
+               <a href="sample-links/logo2.html" class="btn">View Sample</a>
+            </div>
+         </div>
+         <!-- Posters -->
+         <h2 class="portfolio-category">Posters</h2>
+         <div class="portfolio-cards">
+            <div class="card">
+               <img src="Images/pos1.jpg" alt="Poster Sample">
+               <h3>Event Poster</h3>
+               <a href="sample-links/poster1.html" class="btn">View Sample</a>
+            </div>
+            <div class="card">
+               <img src="Images/pos2.jpg" alt="Poster Sample">
+               <h3>Marketing Poster</h3>
+               <a href="sample-links/poster2.html" class="btn">View Sample</a>
+            </div>
+         </div>
+         <!-- Visiting Cards -->
+         <h2 class="portfolio-category">Visiting Cards</h2>
+         <div class="portfolio-cards">
+            <div class="card">
+               <img src="Images/vis1.jpg" alt="Visiting Card Sample">
+               <h3>Corporate Card</h3>
+               <a href="sample-links/card1.html" class="btn">View Sample</a>
+            </div>
+            <div class="card">
+               <img src="Images/vis2.jpg" alt="Visiting Card Sample">
+               <h3>Freelance Card</h3>
+               <a href="sample-links/card2.html" class="btn">View Sample</a>
+            </div>
+         </div>
+      </section>
+      <footer>
+         <p>&copy; 2024 WebVisionary. All rights reserved.</p>
+      </footer>
+   </body>
 </html>
