@@ -19,17 +19,18 @@
              </a>
          </div>
          <div class="menu-toggle" id="menuToggle">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+             <span class="bar"></span>
+             <span class="bar"></span>
+             <span class="bar"></span>
          </div>
          <div class="nav-links" id="navLinks">
-            <a href="index.html">Home</a>
-            <a href="categories.html">Categories</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="contact.html">Contact</a>
+             <a href="index.html">Home</a>
+             <a href="categories.html">Categories</a>
+             <a href="portfolio.html">Portfolio</a>
+             <a href="contact.html">Contact</a>
          </div>
      </div>
+ 
      <script>
       // JavaScript to toggle the navigation menu
       document.getElementById("menuToggle").addEventListener("click", function () {
@@ -44,8 +45,29 @@
          });
          
       </script>
-      <script
-         ></script>
+      <!-- Typing Sound Effect -->
+  <audio id="typing-sound" src="audio/typ.mp3" preload="auto"></audio>
+      <script>
+         window.addEventListener('load', function () {
+  const tagline = document.querySelector('#tagline');
+  const typingSound = document.getElementById('typing-sound');
+
+  // Start playing typing sound
+  typingSound.loop = true; // Loop the sound while typing
+  typingSound.play();
+
+  // Apply typing animation
+  tagline.style.animation = 'typing 3s steps(40) 1s 1 normal both, blink 0.75s step-end infinite';
+
+  // Stop typing sound after the animation
+  setTimeout(() => {
+    typingSound.pause();
+    typingSound.currentTime = 0; // Reset the sound
+    tagline.classList.add('typing-done'); // Hide the cursor after typing is done
+  }, 1500); // Match typing animation duration
+});
+
+      </script>
       <section class="hero" data-aos="fade-up">
          <h1 id="tagline">Transform Your Ideas <br> into Stunning Websites</h1>
          <p>Explore professionally designed websites to boost your business.</p>

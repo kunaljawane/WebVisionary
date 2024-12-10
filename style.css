@@ -72,6 +72,7 @@ body {
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
+  /* Hide the regular nav links on small screens */
   .nav-links {
     display: none;
     flex-direction: column;
@@ -83,15 +84,22 @@ body {
     padding: 20px 0;
   }
 
+  .nav-links a {
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Display hamburger menu */
   .menu-toggle {
     display: flex;
   }
 
+  /* Show nav links when menu is active */
   .nav-links.active {
     display: flex;
   }
 }
-
 
 /* Hero Section */
 .hero {
