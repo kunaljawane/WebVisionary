@@ -5,13 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us - WebVisionary</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
-
+  <link rel="stylesheet" href="style4.css">
 </head>
 <body>
+  <!-- Navbar -->
   <div class="navbar">
     <div class="logo">
-      <!-- Replace with your logo image and make it clickable to redirect to index.html -->
       <a href="index.html">
         <img src="Images/logo.png" alt="Web Visionary Logo" class="logo-img">
       </a>
@@ -29,20 +28,33 @@
     </div>
   </div>
 
+  <!-- Contact Section -->
   <section class="contact-section">
-    <h1>Contact Us</h1>
-    <form class="contact-form">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" placeholder="Your Name" required>
+    <h1 class="contact-heading">For Queries and Orders Contact Below</h1>
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="Your Email" required>
+    <div class="contact-info">
+      <p>
+        <img src="Images/mail.png" alt="Mail Icon" class="contact-icon">
+        Mail us on - <a href="mailto:mainID@gmail.com" class="contact-link">mainID@gmail.com</a>
+      </p>
+      <p>
+        <img src="Images/whatsapp.jpg" alt="WhatsApp Icon" class="contact-icon">
+        Drop a WhatsApp message on - <a href="https://wa.me/1234567890" class="contact-link" target="_blank">+91 12345 67890</a>
+      </p>
+    </div>
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+    <!-- Contact Form -->
+    <div class="form-section">
+      <a href="https://forms.google.com" target="_blank" class="form-link">
+        <button class="form-button">Contact Us Form</button>
+      </a>
+    </div>
 
-      <button type="submit">Send Message</button>
-    </form>
+    <!-- UPI QR Code -->
+    <div class="upi-section">
+      <h3>For Payments Scan This:</h3>
+      <img src="Images/qr.png" alt="UPI QR Code" class="upi-qr">
+    </div>
   </section>
 
   <footer>

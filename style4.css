@@ -1,0 +1,117 @@
+/* Contact Section */
+.contact-section {
+    padding: 50px 20px;
+    background-color: #111; /* Matches theme */
+    color: #fff;
+    text-align: center;
+  }
+  
+  .contact-heading {
+    font-size: 2.5rem;
+    color: #ffc107; /* Yellow for emphasis */
+    margin-bottom: 30px;
+  }
+  
+  /* Contact Info */
+  .contact-info {
+    font-size: 1.2rem;
+    margin: 20px 0;
+  }
+  
+  .contact-info p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+  }
+  
+  .contact-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  .contact-link {
+    color: #ff5733; /* Orange link */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .contact-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Contact Form */
+  .form-section {
+    margin: 30px 0;
+  }
+  
+  .form-button {
+    background-color: #ff5733; /* Orange button */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .form-button:hover {
+    background-color: #ffc107; /* Yellow hover */
+  }
+  
+  /* UPI QR Code Section */
+  .upi-section {
+    margin-top: 40px;
+  }
+  
+  .upi-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #ffc107; /* Yellow for emphasis */
+  }
+  
+  .upi-qr {
+    width: 200px;
+    height: 200px;
+    border: 5px solid #ffc107; /* Orange border */
+    border-radius: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact-heading {
+      font-size: 2rem;
+    }
+  
+    .contact-info p {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .contact-icon {
+      margin-bottom: 10px;
+    }
+  
+    .form-button {
+      width: 80%;
+      font-size: 1rem;
+    }
+  
+    .upi-qr {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contact-heading {
+      font-size: 1.8rem;
+    }
+  
+    .form-button {
+      font-size: 0.9rem;
+    }
+  }
+  

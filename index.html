@@ -14,10 +14,9 @@
       <!-- Navbar -->
       <div class="navbar">
          <div class="logo">
-            <!-- Replace with your logo image and make it clickable to redirect to index.html -->
-            <a href="index.html">
-            <img src="Images/logo.png" alt="Web Visionary Logo" class="logo-img">
-            </a>
+             <a href="index.html">
+                 <img src="Images/logo.png" alt="Web Visionary Logo" class="logo-img">
+             </a>
          </div>
          <div class="menu-toggle" id="menuToggle">
             <span class="bar"></span>
@@ -30,8 +29,14 @@
             <a href="portfolio.html">Portfolio</a>
             <a href="contact.html">Contact</a>
          </div>
-      </div>
-      </div>
+     </div>
+     <script>
+      // JavaScript to toggle the navigation menu
+      document.getElementById("menuToggle").addEventListener("click", function () {
+         const navLinks = document.getElementById("navLinks");
+         navLinks.classList.toggle("active");
+      });
+   </script>
       <script>
          window.addEventListener('load', function () {
          const logo = document.querySelector('.logo-img');
